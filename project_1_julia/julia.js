@@ -1,4 +1,4 @@
-let budget = 0;
+let budget = 6000;
 
 const budgetSpan = document.getElementById("value");
 const input = document.getElementById("input");
@@ -12,7 +12,7 @@ buttons.forEach(button => {
 
     if (!amount || amount <= 0) return;
 
-    budget += amount;
+    budget -= amount;
     budgetSpan.textContent = budget;
     input.value = "";
   });

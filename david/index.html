@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Budget App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/9e2628d3b9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Header Section -->
+      <header class="header">
+        <div class="budget-display">
+          <span class="currency-amount">6 000$</span>
+          <span class="budget-label">Изначальный бюджет</span>
+        </div>
+      </header>
+
+      <!-- Input Section -->
+      <div class="input-section">
+        <div class="input-box">
+          <input
+            type="number"
+            placeholder="3000"
+            class="input-value"
+            min="0"
+            step="1"
+          />
+          <div class="currency-selector">
+            <span>$</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categories Grid -->
+      <div class="categories-grid">
+        <!-- Row 1 -->
+        <div data-category="Eat" class="category-item">
+          <div class="icon-box">
+            <i class="fa-solid fa-ice-cream"></i>
+          </div>
+          <span class="category-name">Eat</span>
+        </div>
+        <div data-category="Beer" class="category-item">
+          <div class="icon-box">
+            <i class="fa-solid fa-beer-mug-empty"></i>
+          </div>
+          <span class="category-name">Beer</span>
+        </div>
+        <div data-category="Bikes" class="category-item">
+          <div class="icon-box">
+            <i class="fa-solid fa-bicycle"></i>
+          </div>
+          <span class="category-name">Bikes</span>
+        </div>
+        <div data-category="Books" class="category-item">
+          <div class="icon-box">
+            <i class="fa-solid fa-book"></i>
+          </div>
+          <span class="category-name">Books</span>
+        </div>
+
+        <!-- Row 2 -->
+        <div data-category="Energy" class="category-item">
+          <div class="icon-box">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <span class="category-name">Energy</span>
+        </div>
+        <div data-category="Kids" class="category-item">
+          <div class="icon-box">
+            <i class="fa-solid fa-baby"></i>
+          </div>
+          <span class="category-name">Kids</span>
+        </div>
+        <div data-category="Croissants" class="category-item">
+          <div class="icon-box">
+            <i class="fa-solid fa-bread-slice"></i>
+          </div>
+          <span class="category-name">Croissants</span>
+        </div>
+        <div data-category="Gym" class="category-item">
+          <div class="icon-box">
+            <i class="fa-solid fa-dumbbell"></i>
+          </div>
+          <span class="category-name">Gym</span>
+        </div>
+
+        <!-- Row 3 -->
+        <div data-category="Transport" class="category-item">
+          <div class="icon-box">
+            <i class="fa-solid fa-bus"></i>
+          </div>
+          <span class="category-name">Transport</span>
+        </div>
+        <div data-category="Clothes" class="category-item">
+          <div class="icon-box">
+            <i class="fa-solid fa-shirt"></i>
+          </div>
+          <span class="category-name">Clothes</span>
+        </div>
+        <div data-category="Games" class="category-item">
+          <div class="icon-box">
+            <i class="fa-solid fa-gamepad"></i>
+          </div>
+          <span class="category-name">Games</span>
+        </div>
+        <div data-category="Rent" class="category-item">
+          <div class="icon-box">
+            <i class="fa-solid fa-house"></i>
+          </div>
+          <span class="category-name">Rent</span>
+        </div>
+
+        <!-- Row 4 -->
+        <div data-category="Gifts" class="category-item">
+          <div class="icon-box">
+            <i class="fa-solid fa-gift"></i>
+          </div>
+          <span class="category-name">Gifts</span>
+        </div>
+        <div data-category="Phone" class="category-item">
+          <div class="icon-box">
+            <i class="fa-solid fa-mobile-screen"></i>
+          </div>
+          <span class="category-name">Phone</span>
+        </div>
+        <div data-category="Travel" class="category-item">
+          <div class="icon-box">
+            <i class="fa-solid fa-plane"></i>
+          </div>
+          <span class="category-name">Travel</span>
+        </div>
+        <div data-category="Health" class="category-item">
+          <div class="icon-box">
+            <i class="fa-solid fa-briefcase-medical"></i>
+          </div>
+          <span class="category-name">Health</span>
+        </div>
+      </div>
+
+      <!-- Add button -->
+      <button class="add-button">Добавить</button>
+      <!-- Transaction List -->
+      <div class="transaction-list hidden"></div>
+    </div>
+
+    <div id="message" class="hidden">
+      <p class="title">Title</p>
+      <p class="content">Content</p>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
